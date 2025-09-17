@@ -15,8 +15,7 @@ jobs:
     name: Run Flutter analyze and teste
     runs-on: ubuntu-latest
     steps:
-      - name: Baixando arquivos do repositório para a VM 
-        uses: actions/checkout@v2 # baixa os arquivos do repositório para a VM.
+      - uses: actions/checkout@v2 # baixa os arquivos do repositório para a VM.
       - uses: actions/setup-java@v1 # instala e configura o java, pois o Flutter usa Gradle (Java) para compilar apps Android.
         with:
           java-version: "12.x"
