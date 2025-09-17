@@ -1,0 +1,140 @@
+{
+  "pedido": {
+    "id": 1,
+    "numero": "65685",
+    "cliente": "Condomínio Edifício Villaggio Di Siena",
+    "endereco": "RUA ANTONIO JULIO DOS ANJOS, 554 - Morumbi",
+    "telefone": "11-3742-0122",
+    "email": "-",
+    "comprador": "Ezequiel Machado",
+    "estoque": "Fast Limpo",
+    "obs": "Alert",
+    "dataCriacao": "2025-08-25T10:00:00",
+    "separador": "",
+    "inicio": "",
+    "fim": ""
+  },
+  "produtos": [
+    {
+      "id": 1,
+      "pedidoId": 1,
+      "endereco": "R3:M5:N4:V3",
+      "descricao": "Desinfetante DHPB Floral 5L",
+      "solicitado": 4,
+      "separado": 4,
+      "imagemPath": "https://cepel.vteximg.com.br/arquivos/ids/160891-1000-1000/ajax-fresh.jpg?v=636028773844530000",
+      "codigoBarras": "1234567890123"
+    },
+    {
+      "id": 2,
+      "pedidoId": 1,
+      "endereco": "R3:M8:N4:V3",
+      "descricao": "Lava Louças Cristal DHPB c/500ml",
+      "solicitado": 2,
+      "separado": 2,
+      "imagemPath": "https://cepel.vteximg.com.br/arquivos/ids/160891-1000-1000/ajax-fresh.jpg?v=636028773844530000",
+      "codigoBarras": "1234567890124"
+    },
+    {
+      "id": 3,
+      "pedidoId": 1,
+      "endereco": "R3:M10:N3:V1",
+      "descricao": "Limpador Multiuso Tradicional (Azul) DHPB 500ml",
+      "solicitado": 4,
+      "separado": 4,
+      "imagemPath": "https://cepel.vteximg.com.br/arquivos/ids/160891-1000-1000/ajax-fresh.jpg?v=636028773844530000",
+      "codigoBarras": "1234567890125"
+    },
+    {
+      "id": 4,
+      "pedidoId": 1,
+      "endereco": "",
+      "descricao": "Detergente em Pó Urca Concentrado 800g",
+      "solicitado": 3,
+      "separado": 3,
+      "imagemPath": "https://cepel.vteximg.com.br/arquivos/ids/160891-1000-1000/ajax-fresh.jpg?v=636028773844530000",
+      "codigoBarras": "1234567890126"
+    },
+    {
+      "id": 5,
+      "pedidoId": 1,
+      "endereco": "R5:M6:N2:V6",
+      "descricao": "Flanela Branca G (58cm x 38cm)",
+      "solicitado": 4,
+      "separado": 4,
+      "imagemPath": "https://cepel.vteximg.com.br/arquivos/ids/160891-1000-1000/ajax-fresh.jpg?v=636028773844530000",
+      "codigoBarras": "1234567890127"
+    },
+    {
+      "id": 6,
+      "pedidoId": 1,
+      "endereco": "R5:M4:N3:V2",
+      "descricao": "Saco para Pano Alvejado Especial Extra Grande Textil Primus(47cm x 65cm) 1un",
+      "solicitado": 6,
+      "separado": 6,
+      "imagemPath": "https://cepel.vteximg.com.br/arquivos/ids/160891-1000-1000/ajax-fresh.jpg?v=636028773844530000",
+      "codigoBarras": "1234567890128"
+    },
+    {
+      "id": 7,
+      "pedidoId": 1,
+      "endereco": "R4:M3:N2:V4",
+      "descricao": "Bobina Picotada 30x40cm (FUNDO ESTRELA) 1un",
+      "solicitado": 5,
+      "separado": 5,
+      "imagemPath": "https://cepel.vteximg.com.br/arquivos/ids/160891-1000-1000/ajax-fresh.jpg?v=636028773844530000",
+      "codigoBarras": "1234567890129"
+    },
+    {
+      "id": 8,
+      "pedidoId": 1,
+      "endereco": "R4:M3:N3:V2",
+      "descricao": "Esponja Dupla Face Scotch Brite (Original) 1un",
+      "solicitado": 6,
+      "separado": 6,
+      "imagemPath": "https://cepel.vteximg.com.br/arquivos/ids/160891-1000-1000/ajax-fresh.jpg?v=636028773844530000",
+      "codigoBarras": "1234567890130"
+    },
+    {
+      "id": 9,
+      "pedidoId": 1,
+      "endereco": "R4:M6:N4:V1",
+      "descricao": "Álcool Líquido 70º INPM Antisséptico DHPB 5L",
+      "solicitado": 1,
+      "separado": 1,
+      "imagemPath": "https://cepel.vteximg.com.br/arquivos/ids/160891-1000-1000/ajax-fresh.jpg?v=636028773844530000",
+      "codigoBarras": "1234567890131"
+    },
+    {
+      "id": 10,
+      "pedidoId": 1,
+      "endereco": "R4:M7:N2:V2",
+      "descricao": "Esponja de Aço Assolan c/8un",
+      "solicitado": 1,
+      "separado": 1,
+      "imagemPath": "https://cepel.vteximg.com.br/arquivos/ids/160891-1000-1000/ajax-fresh.jpg?v=636028773844530000",
+      "codigoBarras": "1234567890132"
+    },
+    {
+      "id": 11,
+      "pedidoId": 1,
+      "endereco": "R25:M5:N2:V1",
+      "descricao": "Cera Líquida Brilho Fácil Incolor c/750ml",
+      "solicitado": 2,
+      "separado": 2,
+      "imagemPath": "https://cepel.vteximg.com.br/arquivos/ids/160891-1000-1000/ajax-fresh.jpg?v=636028773844530000",
+      "codigoBarras": "1234567890133"
+    },
+    {
+      "id": 12,
+      "pedidoId": 1,
+      "endereco": "",
+      "descricao": "Sabão em Pedra Neutro Assim 900g",
+      "solicitado": 1,
+      "separado": 1,
+      "imagemPath": "https://cepel.vteximg.com.br/arquivos/ids/160891-1000-1000/ajax-fresh.jpg?v=636028773844530000",
+      "codigoBarras": "1234567890134"
+    }
+  ]
+}
+

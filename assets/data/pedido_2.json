@@ -1,0 +1,67 @@
+{
+  "pedido": {
+    "id": 1,
+    "numero": "75690",
+    "cliente": "Condomínio Jardim das Palmeiras",
+    "endereco": "RUA ANTONIO JULIO DOS ANJOS, 554 - Morumbi",
+    "telefone": "11-3742-0122",
+    "email": "-",
+    "comprador": "Marcos Silva",
+    "estoque": "Limpa Forte",
+    "observacoes": "Pagamento: BOLETO - 28 dias\\nValor Total: R$ 658,40",
+    "data_criacao": "2025-08-25T12:00:00",
+    "separador": "",
+    "inicio": "",
+    "fim": ""
+  },
+  "produtos": [
+    { 
+      "id": 5,
+      "pedido_id": 1,
+      "endereco": "R3:M5:N4:V3",
+      "descricao": "Desinfetante Q4BAC DHPB 5L",
+      "solicitado": 3,
+      "separado": 0,
+      "motivo_nao_separacao":"",
+      "imagem_path": "https://purigilo.eco.br/assets/1.png",
+      "data_atualizacao_imagem": "2025-08-25T12:00:00",
+      "codigo_barras": "9876543210002"
+    },
+    {
+      "id": 6,
+      "pedido_id": 1,
+      "endereco": "R3:M8:N4:V3",
+      "descricao": "Lava Louças Neutro DHPB 500ml",
+      "solicitado": 6,
+      "separado": 0,
+      "motivo_nao_separacao":"",
+      "imagem_path": "https://purigilo.eco.br/assets/2.png",
+      "data_atualizacao_imagem": "2025-08-25T12:00:00",
+      "codigo_barras": "9876543210003"
+    },
+    {
+      "id": 7,
+      "pedido_id": 1,
+      "endereco": "R3:M10:N3:V1",
+      "descricao": "Limpador Multiuso Natural Purigilo 500ml",
+      "solicitado": 2,
+      "separado": 0,
+      "motivo_nao_separacao":"",
+      "imagem_path": "https://purigilo.eco.br/assets/3.png",
+      "data_atualizacao_imagem": "2025-08-25T12:00:00",
+      "codigo_barras": "9876543210004"
+    },
+    {
+      "id": 8,
+      "pedido_id": 1,
+      "endereco": "",
+      "descricao": "Detergente em Pó Tixan 1kg",
+      "solicitado": 4,
+      "separado": 0,
+      "motivo_nao_separacao":"",
+      "imagem_path": "https://purigilo.eco.br/assets/4.png",
+      "data_atualizacao_imagem": "2025-08-25T12:00:00",
+      "codigo_barras": "9876543210005"
+    }
+  ]
+}
