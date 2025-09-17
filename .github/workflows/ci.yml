@@ -38,7 +38,12 @@ jobs:
 
       # Roda testes com cobertura
       - run: flutter test --coverage #Roda os testes unitários do Flutter
-
+      - run: flutter test --machine > test-results.json
+      - uses: dorny/test-reporter@v1.4.2
+        with:
+          name: test-results
+          path: test-results.json
+          reporter: flutter-json
       # Valida cobertura mínima (ajuste o valor para sua meta)
       - uses: VeryGoodOpenSource/very_good_coverage@v1.1.1
         with:
