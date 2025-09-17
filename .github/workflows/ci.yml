@@ -38,27 +38,7 @@ jobs:
 
       # Roda testes com cobertura
       - run: flutter test --coverage #Roda os testes unitários do Flutter
-       # Instala o tojunit globalmente
-      - name: Instalar junitreport
-        run: dart pub global activate junitreport
-
-      - name: Adicionar bin ao PATH
-        run: echo "$HOME/.pub-cache/bin" >> $GITHUB_PATH
-
-      - name: Gerar relatório JUnit
-        run: flutter test --machine | tojunit > test-results.xml
-
-      - uses: dorny/test-reporter@v1.4.2
-        with:
-          name: test-results
-          path: test-results.xml
-          reporter: java-junit
-          list-suites: all
-          list-tests: all
-          max-annotations: 10
-          fail-on-error: true
-
-
+    
       # Valida cobertura mínima (ajuste o valor para sua meta)
       - uses: VeryGoodOpenSource/very_good_coverage@v1.1.1
         with:
