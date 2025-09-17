@@ -38,7 +38,7 @@ jobs:
 
       # Roda testes com cobertura
       - run: flutter test --coverage #Roda os testes unitários do Flutter
-      - run: flutter test --machine > test-results.json
+      - run: flutter test --machine 2> stderr.log | tee test-results.json
       - uses: dorny/test-reporter@v1.4.2
         with:
           name: test-results
