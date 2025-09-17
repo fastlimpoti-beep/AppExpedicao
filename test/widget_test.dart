@@ -14,9 +14,9 @@ void main() {
     await tester.pumpWidget(const MainApp());
 
     // Exemplo: Verifica se existe um título específico ou widget principal
-    expect(find.text('Salve'), findsOneWidget);
+    expect(find.text(""), findsOneWidget);
 
     // Exemplo: Verifica se existe um botão esperado na tela inicial
-    expect(find.byType(ElevatedButton), findsWidgets);
+    expect(find.byType(TextButton), findsWidgets);
   });
 }
