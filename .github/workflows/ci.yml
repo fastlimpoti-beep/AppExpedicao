@@ -39,14 +39,15 @@ jobs:
       # Roda testes com cobertura
       - run: flutter test --coverage #Roda os testes unitários do Flutter
        # Instala o tojunit globalmente
-      - name: Instalar tojunit
-        run: dart pub global activate tojunit
+      - name: Instalar junitreport
+        run: dart pub global activate junitreport
 
-      # Roda testes e gera relatório JUnit
+      - name: Adicionar bin ao PATH
+        run: echo "$HOME/.pub-cache/bin" >> $GITHUB_PATH
+
       - name: Gerar relatório JUnit
         run: flutter test --machine | tojunit > test-results.xml
 
-      # Publica o relatório com dorny/test-reporter
       - uses: dorny/test-reporter@v1.4.2
         with:
           name: test-results
