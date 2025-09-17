@@ -40,7 +40,7 @@ jobs:
       - run: flutter test --coverage #Roda os testes unitários do Flutter
       - name: Gerar JSON de testes
         run: |
-          flutter test --machine 2> stderr.log | grep -v "Resolving" > test-results.json
+          flutter test --machine 2> stderr.log | grep -vE "Resolving|Downloading|Running|Test file" > test-results.json
       - uses: dorny/test-reporter@v1.4.2
         with:
           name: test-results
