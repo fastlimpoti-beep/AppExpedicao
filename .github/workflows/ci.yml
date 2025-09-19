@@ -42,4 +42,4 @@ jobs:
       # Valida cobertura mínima (ajuste o valor para sua meta)
       - uses: VeryGoodOpenSource/very_good_coverage@v1.1.1
         with:
-          min_coverage: 0  # Verifica se a cobertura mínima de testes foi atingida, geralmente se coloca 70, 80
+          min_coverage: 5  # Verifica se a cobertura mínima de testes foi atingida, geralmente se coloca 70, 80

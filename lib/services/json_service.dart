@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:app_separacao/models/pedido.dart';
 import 'package:app_separacao/models/produto.dart';
-import 'package:app_separacao/providers/database/db_helper.dart';
+import 'package:app_separacao/database/db_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -77,7 +77,7 @@ class JsonService {
   Future<void> importarPedidoDoJsonFromServer(BuildContext context) async {
     try {
       final response = await http.get(
-        Uri.parse('http://192.168.1.191:8080/api'),
+        Uri.parse('http://192.168.1.25:8080/api'),
       );
 
       if (response.statusCode != 200) {

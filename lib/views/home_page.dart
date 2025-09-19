@@ -1,4 +1,4 @@
-import 'package:app_separacao/providers/services/json_service.dart';
+import 'package:app_separacao/services/json_service.dart';
 import 'package:app_separacao/utils/dialog_helper.dart';
 import 'package:app_separacao/views/abas_pai.dart';
 import 'package:flutter/material.dart';

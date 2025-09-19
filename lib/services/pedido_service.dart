@@ -1,5 +1,5 @@
 import 'package:app_separacao/models/pedido.dart';
-import 'package:app_separacao/providers/database/db_helper.dart';
+import 'package:app_separacao/database/db_helper.dart';
 
 class PedidoService {
   static Future<int> inserirPedido(Pedido pedido) async {

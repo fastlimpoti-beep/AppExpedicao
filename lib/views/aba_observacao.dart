@@ -1,5 +1,5 @@
 import 'package:app_separacao/models/pedido.dart';
-import 'package:app_separacao/providers/services/pedido_service.dart';
+import 'package:app_separacao/services/pedido_service.dart';
 import 'package:flutter/material.dart';
 
 class AbaObservacoes extends StatefulWidget {

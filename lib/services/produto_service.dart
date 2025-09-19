@@ -1,5 +1,5 @@
 import 'package:app_separacao/models/produto.dart';
-import 'package:app_separacao/providers/database/db_helper.dart';
+import 'package:app_separacao/database/db_helper.dart';
 
 class ProdutoService {
   Future<int> inserirProduto(Produto produto) async {

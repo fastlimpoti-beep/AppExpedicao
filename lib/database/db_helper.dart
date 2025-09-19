@@ -1,4 +1,4 @@
-import 'package:app_separacao/providers/database/db_schema.dart';
+import 'package:app_separacao/database/db_schema.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 

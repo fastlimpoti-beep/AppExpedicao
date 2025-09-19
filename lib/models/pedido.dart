@@ -1,5 +1,5 @@
 class Pedido {
-  final int? id;
+  int? id;
   final String numero;
   final String cliente;
   final String endereco;
