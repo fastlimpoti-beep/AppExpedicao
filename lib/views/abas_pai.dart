@@ -1,7 +1,7 @@
 import 'package:app_separacao/models/pedido.dart';
 import 'package:app_separacao/models/produto.dart';
-import 'package:app_separacao/providers/services/pedido_service.dart';
-import 'package:app_separacao/providers/services/produto_service.dart';
+import 'package:app_separacao/services/pedido_service.dart';
+import 'package:app_separacao/services/produto_service.dart';
 import 'package:app_separacao/views/aba_cliente.dart';
 import 'package:app_separacao/views/aba_observacao.dart';
 import 'package:app_separacao/utils/dialog_helper.dart';

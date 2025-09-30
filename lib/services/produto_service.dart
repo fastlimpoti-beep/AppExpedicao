@@ -1,5 +1,5 @@
 import 'package:app_separacao/models/produto.dart';
-import 'package:app_separacao/providers/database/db_helper.dart';
+import 'package:app_separacao/database/db_helper.dart';
 
 class ProdutoService {
   Future<int> inserirProduto(Produto produto) async {
@@ -24,6 +24,23 @@ class ProdutoService {
         whereArgs: [produto['id'], pedidoId],
       );
     }
+  }
+
+  Future<void> atualizarSeparado({
+    required int produtoId,
+    required int separado,
+    required String motivo,
+  }) async {
+    final db = await DatabaseHelper.instance.database;
+    await db.update(
+      'Produtos',
+      {
+        'separado': separado,
+        'motivo': motivo,
+      },
+      where: 'id = ?',
+      whereArgs: [produtoId],
+    );
   }
 
   Future<List<Produto>> carregarProdutos(int pedidoId) async {

@@ -1,5 +1,6 @@
+import 'package:app_separacao/models/cliente.dart';
 import 'package:app_separacao/models/pedido.dart';
-import 'package:app_separacao/providers/database/db_helper.dart';
+import 'package:app_separacao/database/db_helper.dart';
 
 class PedidoService {
   static Future<int> inserirPedido(Pedido pedido) async {
@@ -96,5 +97,48 @@ class PedidoService {
     );
 
     return result;
+  }
+
+  Future<Cliente> getClienteDoPedido(int pedidoId) async {
+    final db = await DatabaseHelper.instance.database;
+
+    final result = await db.query(
+      'Pedidos',
+      where: 'id = ?',
+      whereArgs: [pedidoId],
+      limit: 1,
+    );
+
+    if (result.isNotEmpty) {
+      final row = result.first;
+      return Cliente(
+        nome: row['cliente'] as String? ?? '',
+        endereco: row['endereco'] as String? ?? '',
+        telefone: row['telefone'] as String? ?? '',
+        email: row['email'] as String? ?? '',
+        comprador: row['comprador'] as String? ?? '',
+        estoque: row['estoque'] as String? ?? '',
+      );
+    } else {
+      throw Exception('Pedido não encontrado');
+    }
+  }
+
+  Future<String> getObservacaoDoPedido(int pedidoId) async {
+    final db = await DatabaseHelper.instance.database;
+
+    final result = await db.query(
+      'Pedidos',
+      columns: ['observacoes'],
+      where: 'id = ?',
+      whereArgs: [pedidoId],
+      limit: 1,
+    );
+
+    if (result.isNotEmpty) {
+      return result.first['observacoes'] as String? ?? '';
+    } else {
+      throw Exception('Pedido não encontrado');
+    }
   }
 }

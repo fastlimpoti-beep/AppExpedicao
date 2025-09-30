@@ -1,0 +1,77 @@
+name: CI/CD
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  flutter_test:
+    name: Run Flutter analyze and test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2 # baixa os arquivos do repositório para a VM.
+      - uses: actions/setup-java@v1 # instala e configura o java, pois o Flutter usa Gradle (Java) para compilar apps Android.
+        with:
+          java-version: "12.x"
+      - uses: subosito/flutter-action@v1 # Baixa e configura o Flutter diretamente do repositório oficial
+        with:
+          channel: "stable"
+      - name: Cache dependencies #Usa cache para evitar baixar dependências toda vez, baixa na primeira execução
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.pub-cache
+            ${{ env.FLUTTER_ROOT }}/.pub-cache
+          key: ${{ runner.os }}-pub-${{ hashFiles('**/pubspec.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-pub-
+
+      - run: flutter pub get #Baixa as dependências do projeto
+      - run: flutter analyze #Roda o analisador estático do Dart/Flutter, verificando Erros de sintaxe, Imports não usados, Boas práticas
+      - run: dart format --output=none --set-exit-if-changed lib/ test/ #Verifica se o código segue o padrão de formatação oficial
+
+      # Roda testes com cobertura
+      - run: flutter test --coverage #Roda os testes unitários do Flutter
+
+      # Valida cobertura mínima (ajuste o valor para sua meta)
+      - uses: VeryGoodOpenSource/very_good_coverage@v1.1.1
+        with:
+          min_coverage: 0  # Verifica se a cobertura mínima de testes foi atingida, geralmente se coloca 70, 80
+
+  build_ios:
+    name: Build Flutter (iOS)
+    needs: [flutter_test]
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: "12.x"
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: "stable"
+      - run: flutter pub get
+      - run: flutter clean
+      - run: flutter build ios --release --no-codesign    
+
+  build_appbundle:
+    name: Build Flutter (Android)
+    needs: [flutter_test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: "12.x"
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: "stable"
+      - run: flutter pub get
+      - run: flutter clean
+      - run: flutter build appbundle
+      - name: Upload appbundle
+        uses: actions/upload-artifact@v2.1.4
+        with:
+          name: appbundle
+          path: build/app/outputs/bundle/release/app-release.aab

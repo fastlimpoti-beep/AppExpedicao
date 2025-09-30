@@ -10,20 +10,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
+  testWidgets('Tela inicial carrega com sucesso', (WidgetTester tester) async {
     await tester.pumpWidget(const MainApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Exemplo: Verifica se existe um título específico ou widget principal
+    expect(find.text('Bem Vindo(a)'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Exemplo: Verifica se existe um botão esperado na tela inicial
+    expect(find.byType(ElevatedButton), findsWidgets);
   });
 }

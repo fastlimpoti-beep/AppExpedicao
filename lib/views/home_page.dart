@@ -1,6 +1,7 @@
-import 'package:app_separacao/providers/services/json_service.dart';
+import 'package:app_separacao/services/json_service.dart';
 import 'package:app_separacao/utils/dialog_helper.dart';
 import 'package:app_separacao/views/abas_pai.dart';
+import 'package:app_separacao/views/nova/bloc_pai.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -22,9 +23,7 @@ class _HomePageState extends State<HomePage> {
     if (id != null) {
       Navigator.push(
         context,
-        MaterialPageRoute(
-          builder: (context) => AbasTestes(pedidoId: id, id: _controller.text),
-        ),
+        MaterialPageRoute(builder: (context) => TelaPedido(pedidoId: id)),
       );
       FocusScope.of(context).unfocus();
     } else {

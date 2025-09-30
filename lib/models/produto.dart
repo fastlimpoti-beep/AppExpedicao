@@ -1,5 +1,5 @@
 class Produto {
-  final int? id;
+  int? id;
   final int? pedidoId;
   final String endereco;
   final String descricao;

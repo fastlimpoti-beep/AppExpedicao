@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:app_separacao/models/pedido.dart';
 import 'package:app_separacao/models/produto.dart';
-import 'package:app_separacao/providers/services/json_service.dart';
-import 'package:app_separacao/providers/services/pedido_service.dart';
-import 'package:app_separacao/providers/services/produto_service.dart';
+import 'package:app_separacao/services/json_service.dart';
+import 'package:app_separacao/services/pedido_service.dart';
+import 'package:app_separacao/services/produto_service.dart';
 import 'package:app_separacao/views/home_page.dart';
 import 'package:flutter/material.dart';
 
