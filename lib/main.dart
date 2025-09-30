@@ -1,4 +1,6 @@
+import 'package:app_separacao/views/nova/bloc.dart';
 import 'package:app_separacao/views/home_page.dart';
+import 'package:app_separacao/views/teste.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +20,7 @@ class MainApp extends StatelessWidget {
           seedColor: const Color.fromARGB(254, 121, 0, 1),
         ),
       ),
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }

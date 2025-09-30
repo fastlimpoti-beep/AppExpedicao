@@ -26,6 +26,23 @@ class ProdutoService {
     }
   }
 
+  Future<void> atualizarSeparado({
+    required int produtoId,
+    required int separado,
+    required String motivo,
+  }) async {
+    final db = await DatabaseHelper.instance.database;
+    await db.update(
+      'Produtos',
+      {
+        'separado': separado,
+        'motivo': motivo,
+      },
+      where: 'id = ?',
+      whereArgs: [produtoId],
+    );
+  }
+
   Future<List<Produto>> carregarProdutos(int pedidoId) async {
     final data = await ProdutoService.buscarProdutosPorPedidoId(pedidoId);
     return data.map((item) => Produto.fromMap(item)).toList();
